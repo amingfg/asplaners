@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A.S.Planer | Personal Planner</title>
+<link rel="icon" type="image/png" href="lo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+
+        <aside class="sidebar">
+
+    <div class="logo">
+        <h1>A.S.Planer</h1>
+        <span>PERSONAL PLANNER</span>
+    </div>
+
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle" type="button">
+        ☰
+        <span data-i18n="mainMenu">منوی اصلی</span>
+    </button>
+
+    <nav class="sidebar-nav" id="sidebar-nav">
+
+        <a href="index.html" class="nav-link active">
+            <span>🏠</span>
+            <span data-i18n="dashboard">Dashboard</span>
+        </a>
+
+        <a href="calendar.html" class="nav-link">
+            <span>📅</span>
+            <span data-i18n="calendar">Calendar</span>
+        </a>
+
+        <a href="goals.html" class="nav-link">
+            <span>🎯</span>
+            <span data-i18n="goals">Goals</span>
+        </a>
+
+        <a href="habits.html" class="nav-link">
+            <span>🌱</span>
+            <span data-i18n="habits">Habits</span>
+        </a>
+
+        <a href="notes.html" class="nav-link">
+            <span>📝</span>
+            <span data-i18n="notes">Notes</span>
+        </a>
+
+        <a href="charts.html" class="nav-link">
+            <span>📊</span>
+            <span data-i18n="charts">Charts</span>
+        </a>
+
+        <a href="settings.html" class="nav-link">
+            <span>⚙️</span>
+            <span data-i18n="settings">Settings</span>
+        </a>
+
+    </nav>
+
+</aside>
+
+        <!-- Main Content -->
+
+        <main class="main-content">
+
+            <section class="page-section active" id="dashboard-page">
+
+                <header class="topbar">
+
+                    <div>
+                        <h2 data-i18n="myDashboard">داشبورد من 🏠</h2>
+                        <p data-i18n="dashboardSubtitle">به فضای شخصی خودت خوش اومدی 🌸</p>
+                    </div>
+
+               <!-- MY PROFILE -->
+
+<div class="profile" id="profileSection">
+
+    <a href="profile.html" class="profile-main-link">
+
+        <div class="profile-avatar" id="profileAvatar">
+
+            <span id="defaultAvatar">👤</span>
+
+            <img
+                id="profileImage"
+                src=""
+                alt="Profile Picture"
+                hidden
+            >
+
+        </div>
+
+        <div class="profile-info">
+
+            <p data-i18n="myProfile">My Profile</p>
+
+            <span id="profileName">Your Name</span>
+
+        </div>
+
+    </a>
+
+    <a
+        href="profile.html"
+        class="profile-edit-btn"
+        title="Edit Profile"
+    >
+        ✏️
+    </a>
+
+</div>
+
+                </header>
+
+                <!-- Welcome -->
+
+                <section class="welcome">
+                    <h2 data-i18n="welcomeGreeting">سلام، روزت بخیر! 🌷</h2>
+                    <p data-i18n="welcomeMessage">
+                        امروز فرصت تازه‌ای برای رسیدن به
+                        آرزوهاته.
+                    </p>
+                </section>
+
+                <!-- Statistics -->
+
+                <section class="stats">
+
+                    <div class="stat-card">
+                        <span>📋</span>
+                        <h3 id="total-count">0</h3>
+                        <p data-i18n="totalTasks">کل وظایف</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <span>✅</span>
+                        <h3 id="done-count">0</h3>
+                        <p data-i18n="completed">انجام شده</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <span>⏳</span>
+                        <h3 id="remaining-count">0</h3>
+                        <p data-i18n="remaining">باقی مانده</p>
+                    </div>
+
+                </section>
+
+                <!-- Tasks -->
+
+                <section class="tasks">
+
+                    <div class="tasks-header">
+                        <h2 data-i18n="todayTasks">برنامه‌های امروز 🌷</h2>
+                    </div>
+
+                    <section class="calendar-section">
+
+                        <div class="calendar-header">
+                            <button id="next-month" type="button">❮</button>
+
+                            <h2 id="calendar-month">ماه و سال</h2>
+                            <p id="calendar-subtitle" class="calendar-subtitle"></p>
+
+                            <button id="prev-month" type="button">❯</button>
+                        </div>
+
+                        <div class="calendar-weekdays">
+                            <span>Sat</span>
+                            <span>Sun</span>
+                            <span>Mon</span>
+                            <span>Tue</span>
+                            <span>Wed</span>
+                            <span>Thu</span>
+                            <span>Fri</span>
+                        </div>
+
+                        <div id="calendar-days" class="calendar-days"></div>
+
+                    </section>
+
+                    <form id="task-form" class="task-form">
+
+                        <input
+                            type="text"
+                            id="task-input"
+                            placeholder="برنامه جدیدت رو بنویس..."
+                            data-i18n="taskPlaceholder"
+                            autocomplete="off"
+                        >
+
+                        <button type="submit" data-i18n="add">+ افزودن</button>
+
+                    </form>
+
+                    <div class="date-picker">
+                        <label for="task-date" data-i18n="taskDate">تاریخ برنامه:</label>
+                        <input type="date" id="task-date">
+                    </div>
+
+                    <ul id="task-list" class="task-list"></ul>
+
+                    <p id="empty-message" class="empty-message" data-i18n="emptyTasks">
+                        هنوز برنامه‌ای ثبت نکردی 🌸
+                    </p>
+
+                </section>
+
+            </section>
+
+            <section class="page-section" id="calendar-page">
+                <h1 data-i18n="myCalendar">My Calendar</h1>
+                <p data-i18n="calendarDescription">Manage your daily schedule.</p>
+            </section>
+
+            <section class="page-section" id="goals-page">
+
+                <div class="goals-header">
+                    <h1 data-i18n="myGoals">My Goals 🎯</h1>
+                    <p data-i18n="goalsDescription">اهدافت رو بنویس و برای رسیدن بهشون تلاش کن.</p>
+                </div>
+
+                <form id="goal-form" class="goal-form">
+
+                    <input
+                        type="text"
+                        id="goal-input"
+                        placeholder="هدفت رو بنویس..."
+                        data-i18n="goalPlaceholder"
+                        required
+                    >
+
+                    <label for="goal-date" data-i18n="goalDeadline">مهلت رسیدن به هدف:</label>
+                    <input type="date" id="goal-date">
+
+                    <button type="submit" data-i18n="addGoal">+ افزودن هدف</button>
+
+                </form>
+
+                <div id="goals-list" class="goals-list"></div>
+
+                <p id="goals-empty" data-i18n="emptyGoals">هنوز هدفی ثبت نکردی 🌷</p>
+
+            </section>
+
+            <section class="page-section" id="habits-page">
+                <h1 data-i18n="myHabits">My Habits</h1>
+                <p data-i18n="habitsDescription">Build better daily habits.</p>
+            </section>
+
+            <section class="page-section" id="notes-page">
+                <h1 data-i18n="myNotes">My Notes</h1>
+                <p data-i18n="notesDescription">Write down your thoughts.</p>
+            </section>
+
+            <section class="page-section" id="settings-page">
+                <h1 data-i18n="settings">Settings</h1>
+                <p data-i18n="settingsDescription">Customize your planner.</p>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+<script src="profile.js" defer></script>
+</body>
+</html>

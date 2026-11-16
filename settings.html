@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.S.Planer | Settings</title>
+    <link rel="icon" type="image/png" href="lo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <div class="logo">
+            <h1>A.S.Planer</h1>
+            <span>PERSONAL PLANNER</span>
+        </div>
+
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle" type="button">
+        ☰
+        <span data-i18n="mainMenu">منوی اصلی</span>
+    </button>
+        <nav class="sidebar-nav" id="sidebar-nav">
+            <a href="index.html"><span>🏠</span><span data-i18n="dashboard">Dashboard</span></a>
+            <a href="calendar.html"><span>📅</span><span data-i18n="calendar">Calendar</span></a>
+            <a href="goals.html"><span>🎯</span><span data-i18n="goals">Goals</span></a>
+            <a href="habits.html"><span>🌱</span><span data-i18n="habits">Habits</span></a>
+            <a href="notes.html"><span>📝</span><span data-i18n="notes">Notes</span></a>
+            <a href="charts.html" class="nav-link">
+            <span>📊</span>
+            <span data-i18n="charts">Charts</span>
+        </a>
+          <a href="settings.html" class="nav-link active">
+    ⚙️
+    <span data-i18n="settings">Settings</span>
+</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1 data-i18n="settings">Settings ⚙️</h1>
+                <p data-i18n="settingsSubtitle">تنظیمات و شخصی‌سازی پلنر</p>
+            </div>
+         <!-- MY PROFILE -->
+
+<div class="profile" id="profileSection">
+
+    <a href="profile.html" class="profile-main-link">
+
+        <div class="profile-avatar" id="profileAvatar">
+
+            <span id="defaultAvatar">👤</span>
+
+            <img
+                id="profileImage"
+                src=""
+                alt="Profile Picture"
+                hidden
+            >
+
+        </div>
+
+        <div class="profile-info">
+
+            <p data-i18n="myProfile">My Profile</p>
+
+            <span id="profileName">Your Name</span>
+
+        </div>
+
+    </a>
+
+    <a
+        href="profile.html"
+        class="profile-edit-btn"
+        title="Edit Profile"
+    >
+        ✏️
+    </a>
+
+</div>
+
+        </header>
+
+        <section class="settings-welcome">
+            <div>
+                <h1 data-i18n="plannerSettingsTitle">تنظیمات پلنر شما 🌸</h1>
+                <p data-i18n="plannerSettingsDescription">فضای شخصی خودت رو مطابق سلیقه‌ات تنظیم کن.</p>
+            </div>
+            <span>⚙️</span>
+        </section>
+
+        <section class="settings-grid">
+
+            <div class="setting-card">
+                <div class="setting-icon">🎨</div>
+                <h3 data-i18n="appearance">Appearance</h3>
+                <p data-i18n="appearanceDescription">تغییر ظاهر و رنگ‌بندی سایت</p>
+                <div class="theme-options">
+                    <button type="button" id="light-theme" data-i18n="lightMode">☀️ Light Mode</button>
+                    <button type="button" id="dark-theme" data-i18n="darkMode">🌙 Dark Mode</button>
+                </div>
+            </div>
+
+            <div class="setting-card">
+                <div class="setting-icon">🌐</div>
+                <h3 data-i18n="language">Language</h3>
+                <p data-i18n="languageDescription">زبان مورد استفاده در پلنر</p>
+                <select id="language-setting">
+                    <option value="fa">فارسی</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+
+            <div class="setting-card">
+                <div class="setting-icon">📅</div>
+                <h3 data-i18n="calendar">Calendar</h3>
+                <p data-i18n="calendarSettingsDescription">تنظیم نوع تقویم مورد استفاده</p>
+                <select id="calendar-setting">
+                    <option value="persian">تقویم شمسی</option>
+                    <option value="gregorian">تقویم میلادی</option>
+                </select>
+            </div>
+
+            <div class="setting-card">
+                <div class="setting-icon">💗</div>
+                <h3 data-i18n="aboutPlanner">About A.S.Planer</h3>
+                <p data-i18n="aboutPlannerDescription">یک فضای ساده برای برنامه‌ریزی، هدف‌گذاری و پیشرفت روزانه.</p>
+                <span class="version">Version 1.0</span>
+            </div>
+
+        </section>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+<script src="profile.js" defer></script>
+</body>
+</html>

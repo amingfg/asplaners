@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A.S.Planer | My Profile</title>
+<link rel="icon" type="image/png" href="lo.png">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="profile-page">
+
+        <div class="profile-page-header">
+
+            <a href="index.html" class="profile-back-btn">
+                ← Back to Dashboard
+            </a>
+
+            <h1>My Profile</h1>
+
+            <p>Personalize your A.S.Planer account</p>
+
+        </div>
+
+
+        <div class="profile-form-card">
+
+            <form id="profileForm">
+
+                <!-- PROFILE PHOTO -->
+
+                <div class="profile-photo-section">
+
+                    <div class="profile-preview" id="profilePreview">
+
+                        <span id="previewDefaultAvatar">👤</span>
+
+                        <img
+                            id="previewImage"
+                            src=""
+                            alt="Profile Preview"
+                            hidden
+                        >
+
+                    </div>
+
+                    <label
+                        for="profileUpload"
+                        class="upload-photo-btn"
+                    >
+                        Choose Profile Photo
+                    </label>
+
+                    <input
+                        type="file"
+                        id="profileUpload"
+                        accept="image/*"
+                        hidden
+                    >
+
+                    <small>Choose an image from your device</small>
+
+                </div>
+
+
+                <!-- NAME -->
+
+                <div class="profile-input-group">
+
+                    <label for="profileNameInput">
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="profileNameInput"
+                        placeholder="Enter your name"
+                        maxlength="40"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- SAVE BUTTON -->
+
+                <button
+                    type="submit"
+                    class="save-profile-btn"
+                >
+                    Save Profile
+                </button>
+
+                <a href="index.html" class="cancel-profile-btn">
+                    Cancel
+                </a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="profile.js" defer></script>
+
+</body>
+
+</html>

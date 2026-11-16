@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A.S.Planer | Calendar</title>
+<link rel="icon" type="image/png" href="lo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h1>A.S.Planer</h1>
+            <span>PERSONAL PLANNER</span>
+        </div>
+<button class="mobile-menu-toggle" id="mobile-menu-toggle" type="button">
+        ☰
+        <span data-i18n="mainMenu">منوی اصلی</span>
+    </button>
+        <nav class="sidebar-nav" id="sidebar-nav">
+
+            <a href="index.html" class="nav-link">
+                <span>🏠</span>
+                <span data-i18n="dashboard">Dashboard</span>
+            </a>
+
+            <a href="calendar.html" class="nav-link active">
+                <span>📅</span>
+                <span data-i18n="calendar">Calendar</span>
+            </a>
+
+            <a href="goals.html" class="nav-link">
+                <span>🎯</span>
+                <span data-i18n="goals">Goals</span>
+            </a>
+
+            <a href="habits.html" class="nav-link">
+                <span>🌱</span>
+                <span data-i18n="habits">Habits</span>
+            </a>
+
+            <a href="notes.html" class="nav-link">
+                <span>📝</span>
+                <span data-i18n="notes">Notes</span>
+            </a>
+            <a href="charts.html" class="nav-link">
+            <span>📊</span>
+            <span data-i18n="charts">Charts</span>
+        </a>
+<div class="sidebar-bottom">
+            <a href="settings.html" class="nav-link">
+                <span>⚙️</span>
+                <span data-i18n="settings">Settings</span>
+            </a>
+        </div>
+        </nav>
+
+        
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1 data-i18n="myCalendarTitle">تقویم من 📅</h1>
+                <p data-i18n="calendarTopSubtitle">برنامه‌ریزی روزهات رو مدیریت کن 🌸</p>
+            </div>
+<!-- MY PROFILE -->
+
+<div class="profile" id="profileSection">
+
+    <a href="profile.html" class="profile-main-link">
+
+        <div class="profile-avatar" id="profileAvatar">
+
+            <span id="defaultAvatar">👤</span>
+
+            <img
+                id="profileImage"
+                src=""
+                alt="Profile Picture"
+                hidden
+            >
+
+        </div>
+
+        <div class="profile-info">
+
+            <p data-i18n="myProfile">My Profile</p>
+
+            <span id="profileName">Your Name</span>
+
+        </div>
+
+    </a>
+
+    <a
+        href="profile.html"
+        class="profile-edit-btn"
+        title="Edit Profile"
+    >
+        ✏️
+    </a>
+
+</div>
+
+        </header>
+
+        <!-- Calendar -->
+         
+        <section class="calendar-section">
+                
+            <div class="calendar-header">
+
+
+                <button id="next-month" type="button">❮</button>
+
+                <div>
+                    <h2 id="calendar-month">ماه و سال</h2>
+                    <p id="calendar-subtitle"
+                       class="calendar-subtitle"></p>
+                </div>
+
+                <button id="prev-month" type="button">❯</button>
+
+            </div>
+
+            <div class="calendar-weekdays">
+                <span>Sat</span>
+                <span>Sun</span>
+                <span>Mon</span>
+                <span>Tue</span>
+                <span>Wed</span>
+                <span>Thu</span>
+                <span>Fri</span>
+            </div>
+
+            <div id="calendar-days" class="calendar-days"></div>
+
+        </section>
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <span>📋</span>
+                <h3 id="total-count">0</h3>
+                <p data-i18n="totalTasks">کل وظایف</p>
+            </div>
+
+            <div class="stat-card">
+                <span>✅</span>
+                <h3 id="done-count">0</h3>
+                <p data-i18n="completed">انجام شده</p>
+            </div>
+
+            <div class="stat-card">
+                <span>⏳</span>
+                <h3 id="remaining-count">0</h3>
+                <p data-i18n="remaining">باقی مانده</p>
+            </div>
+
+        </section>
+
+        <!-- Daily Tasks -->
+        <section class="tasks">
+
+            <div class="tasks-header">
+                <h2 data-i18n="dailyTasks">برنامه‌های این روز 🌷</h2>
+            </div>
+
+            <form id="task-form" class="task-form">
+
+                <input
+                    type="text"
+                    id="task-input"
+                    placeholder="برنامه جدیدت رو بنویس..."
+                    data-i18n="taskPlaceholder"
+                    autocomplete="off"
+                >
+
+                <button type="submit" data-i18n="add">+ افزودن</button>
+
+            </form>
+
+            <div class="date-picker">
+                <label for="task-date" data-i18n="taskDate">تاریخ برنامه:</label>
+                <input type="date" id="task-date">
+            </div>
+
+            <ul id="task-list" class="task-list"></ul>
+
+            <p id="empty-message" class="empty-message" data-i18n="emptyDailyTasks">
+                هنوز برنامه‌ای برای این روز ثبت نکردی 🌸
+            </p>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+<script src="profile.js" defer></script>
+</body>
+</html>

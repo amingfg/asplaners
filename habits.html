@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.S.Planer | Habits</title>
+    <link rel="icon" type="image/png" href="lo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <div class="logo">
+            <h1>A.S.Planer</h1>
+            <span>PERSONAL PLANNER</span>
+        </div>
+<button class="mobile-menu-toggle" id="mobile-menu-toggle" type="button">
+        ☰
+        <span data-i18n="mainMenu">منوی اصلی</span>
+    </button>
+        <nav class="sidebar-nav" id="sidebar-nav">
+            <a href="index.html" class="nav-link"><span>🏠</span> <span data-i18n="dashboard">Dashboard</span></a>
+            <a href="calendar.html" class="nav-link"><span>📅</span> <span data-i18n="calendar">Calendar</span></a>
+            <a href="goals.html" class="nav-link"><span>🎯</span> <span data-i18n="goals">Goals</span></a>
+            <a href="habits.html" class="nav-link active"><span>🌱</span> <span data-i18n="habits">Habits</span></a>
+            <a href="notes.html" class="nav-link"><span>📝</span> <span data-i18n="notes">Notes</span></a>
+            <a href="charts.html" class="nav-link">
+            <span>📊</span>
+            <span data-i18n="charts">Charts</span>
+        </a>
+             <div class="sidebar-bottom">
+            <a href="settings.html" class="nav-link"><span>⚙️</span> <span data-i18n="settings">Settings</span></a>
+        </div>
+        </nav>
+
+       
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1 data-i18n="myHabits">عادت‌های من </h1>
+                <p data-i18n="habitsTopSubtitle">هر روز یک قدم به نسخه بهتر خودت نزدیک‌تر شو.</p>
+            </div>
+
+            <!-- MY PROFILE -->
+
+<div class="profile" id="profileSection">
+
+    <a href="profile.html" class="profile-main-link">
+
+        <div class="profile-avatar" id="profileAvatar">
+
+            <span id="defaultAvatar">👤</span>
+
+            <img
+                id="profileImage"
+                src=""
+                alt="Profile Picture"
+                hidden
+            >
+
+        </div>
+
+        <div class="profile-info">
+
+            <p data-i18n="myProfile">My Profile</p>
+
+            <span id="profileName">Your Name</span>
+
+        </div>
+
+    </a>
+
+    <a
+        href="profile.html"
+        class="profile-edit-btn"
+        title="Edit Profile"
+    >
+        ✏️
+    </a>
+
+</div>
+
+        </header>
+
+        <section class="page-section active" id="habits-page">
+
+            <form id="habit-form" class="habit-form">
+                <input
+                    type="text"
+                    id="habit-input"
+                    data-i18n="habitPlaceholder"
+                    placeholder="مثلاً روزی ۳۰ دقیقه مطالعه..."
+                    required
+                >
+
+                <button type="submit" data-i18n="addHabit">+ افزودن عادت</button>
+            </form>
+
+            <div id="habits-list" class="habits-list"></div>
+
+            <p id="habits-empty" data-i18n="emptyHabits">هنوز عادتی ثبت نکردی 🌷</p>
+
+        </section>
+
+    </main>
+
+</div>
+<script src="profile.js" defer></script>
+<script src="script.js"></script>
+</body>
+</html>
